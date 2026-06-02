@@ -43,13 +43,22 @@ export default function Espaco() {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 py-12 md:py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-6 leading-tight">
-              Conheça Nosso <span className="text-primary">Espaço</span>
-            </h1>
-            <p className="text-lg text-foreground/70 mb-8">
-              Um ambiente pensado em cada detalhe para proporcionar conforto, segurança e desenvolvimento das crianças.
-            </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div className="max-w-3xl">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-6 leading-tight">
+                Conheça Nosso <span className="text-primary">Espaço</span>
+              </h1>
+              <p className="text-lg text-foreground/70 mb-8">
+                Um ambiente pensado em cada detalhe para proporcionar conforto, segurança e desenvolvimento das crianças.
+              </p>
+            </div>
+            <div className="flex justify-center lg:justify-end">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F33d7172519c742558ec645d0ad698a62%2Febbe3a79fecd4ef18e2c6d408c1709d0?format=webp&width=800&height=1200"
+                alt="Espaço Estrela da Manhã"
+                className="w-full max-w-md rounded-2xl shadow-lg"
+              />
+            </div>
           </div>
         </div>
       </section>
