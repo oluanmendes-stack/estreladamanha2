@@ -15,25 +15,25 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white shadow-md">
-      <nav className="container mx-auto px-4 py-4">
+      <nav className="container mx-auto px-3 sm:px-4 py-3 sm:py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link
             to="/"
-            className="flex items-center gap-2 font-display text-2xl font-bold text-primary"
+            className="flex items-center gap-1 sm:gap-2 font-display text-lg sm:text-2xl font-bold text-primary"
           >
-            <span className="text-3xl">⭐</span>
+            <span className="text-2xl sm:text-3xl">⭐</span>
             <span className="hidden sm:inline">Estrela da Manhã</span>
-            <span className="sm:hidden">Estrela</span>
+            <span className="sm:hidden text-sm">Estrela</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6 lg:gap-8">
             {links.map((link) => (
               <Link
                 key={link.href}
                 to={link.href}
-                className="font-medium text-foreground hover:text-primary transition-colors"
+                className="font-medium text-foreground hover:text-primary transition-colors text-sm lg:text-base"
               >
                 {link.label}
               </Link>
@@ -41,30 +41,30 @@ export default function Header() {
           </div>
 
           {/* Contact Button - Desktop */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-3 lg:gap-4">
             <a
               href="https://wa.me/553199871551"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full font-medium transition-colors"
+              className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-3 lg:px-4 py-2 rounded-full font-medium transition-colors text-sm lg:text-base"
             >
               <svg
-                className="w-5 h-5"
+                className="w-4 lg:w-5 h-4 lg:h-5"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.272-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.906 1.235c-1.413.666-2.706 1.649-3.71 2.855-1.419 1.666-2.207 3.91-2.207 6.052 0 .503.047 1.007.14 1.501C.936 23.22 0 24 0 24s.931-1.811 2.311-4.623c.636-1.464.922-2.881.922-4.406 0-1.81-.424-3.54-1.207-5.056-1.27-2.663-3.06-4.726-5.335-5.92A9.865 9.865 0 0112.05 0c5.471 0 9.95 4.479 9.95 9.95 0 5.471-4.479 9.95-9.95 9.95z" />
               </svg>
-              WhatsApp
+              <span className="hidden lg:inline">WhatsApp</span>
             </a>
             <a
               href="https://www.instagram.com/estreladamanhabh/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center w-10 h-10 bg-secondary text-foreground rounded-full hover:bg-secondary/80 transition-colors"
+              className="inline-flex items-center justify-center w-9 lg:w-10 h-9 lg:h-10 bg-secondary text-foreground rounded-full hover:bg-secondary/80 transition-colors"
             >
               <svg
-                className="w-5 h-5"
+                className="w-4 lg:w-5 h-4 lg:h-5"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -89,34 +89,37 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden mt-4 pb-4 flex flex-col gap-3">
+          <div className="md:hidden mt-3 sm:mt-4 pb-3 sm:pb-4 flex flex-col gap-2 sm:gap-3">
             {links.map((link) => (
               <Link
                 key={link.href}
                 to={link.href}
-                className="font-medium text-foreground hover:text-primary transition-colors py-2"
+                className="font-medium text-foreground hover:text-primary transition-colors py-2 text-sm"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
               </Link>
             ))}
-            <div className="flex gap-3 pt-2 border-t">
+            <div className="flex gap-2 sm:gap-3 pt-2 sm:pt-3 border-t">
               <a
                 href="https://wa.me/553199871551"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-3 py-2 rounded-full font-medium text-sm transition-colors"
+                className="flex-1 inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-2 sm:px-3 py-2 rounded-full font-medium text-xs sm:text-sm transition-colors"
               >
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.272-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.906 1.235c-1.413.666-2.706 1.649-3.71 2.855-1.419 1.666-2.207 3.91-2.207 6.052 0 .503.047 1.007.14 1.501C.936 23.22 0 24 0 24s.931-1.811 2.311-4.623c.636-1.464.922-2.881.922-4.406 0-1.81-.424-3.54-1.207-5.056-1.27-2.663-3.06-4.726-5.335-5.92A9.865 9.865 0 0112.05 0c5.471 0 9.95 4.479 9.95 9.95 0 5.471-4.479 9.95-9.95 9.95z" />
+                </svg>
                 WhatsApp
               </a>
               <a
                 href="https://www.instagram.com/estreladamanhabh/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center w-10 h-10 bg-secondary text-foreground rounded-full hover:bg-secondary/80 transition-colors"
+                className="inline-flex items-center justify-center w-9 sm:w-10 h-9 sm:h-10 bg-secondary text-foreground rounded-full hover:bg-secondary/80 transition-colors"
               >
                 <svg
-                  className="w-5 h-5"
+                  className="w-4 sm:w-5 h-4 sm:h-5"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
