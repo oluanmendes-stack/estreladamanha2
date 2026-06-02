@@ -39,15 +39,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Hours */}
-          <div>
-            <h4 className="font-bold text-lg mb-4">Horários</h4>
-            <div className="space-y-2 text-foreground/70 text-sm">
-              <p>Segunda a Sexta: 6h às 18h</p>
-              <p>Sábado: Fechado</p>
-              <p>Domingo: Fechado</p>
-            </div>
-          </div>
 
           {/* Social */}
           <div>
