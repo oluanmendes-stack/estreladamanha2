@@ -5,51 +5,11 @@ import { Calendar, User } from "lucide-react";
 const newsItems = [
   {
     id: 1,
-    title: "Inauguração de Nova Sala de Artes",
-    excerpt: "Estamos felizes em anunciar a abertura de nossa nova sala de artes equipada com materiais modernos e inspiradores para as crianças desenvolverem sua criatividade.",
-    date: "15 de Março, 2024",
+    title: "1 Mês de Muito Amor e Cuidado",
+    excerpt: "Hoje o nosso hotelzinho infantil completa 1 mês de muito amor, cuidado, aprendizado e momentos especiais! 💛\n\nQueremos agradecer de coração a todos os pais e responsáveis pela confiança, parceria e carinho com o nosso trabalho. Cada criança que passa por aqui torna nossos dias mais alegres e cheios de significado.\n\nSeguimos com o coração cheio de gratidão e felizes por fazer parte da rotina e do crescimento de cada criança. Que venham muitos outros meses de descobertas, afeto e momentos inesquecíveis! ✨",
+    date: "Hoje",
     author: "Equipe Estrela da Manhã",
-    image: "🎨",
-  },
-  {
-    id: 2,
-    title: "Programa de Educação Inclusiva",
-    excerpt: "Implementamos um novo programa dedicado à educação inclusiva, garantindo que todas as crianças, independentemente de suas diferenças, recebam atendimento personalizado e igualitário.",
-    date: "10 de Março, 2024",
-    author: "Coordenação Pedagógica",
-    image: "🌈",
-  },
-  {
-    id: 3,
-    title: "Aulas de Música Começam em Abril",
-    excerpt: "A partir de abril, estamos iniciando o programa de aulas de música para todas as crianças. Saiba como a música contribui para o desenvolvimento cognitivo e emocional.",
-    date: "5 de Março, 2024",
-    author: "Departamento de Atividades",
-    image: "🎵",
-  },
-  {
-    id: 4,
-    title: "Dia da Criança - Celebração Especial",
-    excerpt: "Preparamos atividades incríveis para celebrar o dia das crianças com brincadeiras, competições amigáveis e muita diversão. Os pais foram convidados a participar.",
-    date: "28 de Fevereiro, 2024",
-    author: "Equipe de Eventos",
-    image: "🎉",
-  },
-  {
-    id: 5,
-    title: "Novo Horário Ampliado Disponível",
-    excerpt: "Respondendo às necessidades das famílias, ampliamos nossos horários de atendimento. Agora oferecemos flexibilidade maior para se adequar à sua rotina.",
-    date: "20 de Fevereiro, 2024",
-    author: "Administração",
-    image: "⏰",
-  },
-  {
-    id: 6,
-    title: "Encontro de Pais e Mestres",
-    excerpt: "Realizamos um encontro produtivo com pais e responsáveis para discutir o desenvolvimento das crianças e planejar as atividades do próximo semestre.",
-    date: "15 de Fevereiro, 2024",
-    author: "Coordenação",
-    image: "👥",
+    image: "💛",
   },
 ];
 
@@ -102,9 +62,9 @@ export default function Noticias() {
                   </h3>
 
                   {/* Excerpt */}
-                  <p className="text-foreground/70 text-sm mb-4 line-clamp-3">
+                  <div className="text-foreground/70 text-sm mb-4 whitespace-pre-wrap">
                     {item.excerpt}
-                  </p>
+                  </div>
 
                   {/* Author */}
                   <div className="flex items-center gap-2 text-sm text-foreground/60 pt-4 border-t border-gray-100">
