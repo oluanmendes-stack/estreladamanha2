@@ -7,7 +7,7 @@ const newsItems = [
     id: 1,
     title: "1 Mês de Muito Amor e Cuidado",
     excerpt: "Hoje o nosso hotelzinho infantil completa 1 mês de muito amor, cuidado, aprendizado e momentos especiais! 💛\n\nQueremos agradecer de coração a todos os pais e responsáveis pela confiança, parceria e carinho com o nosso trabalho. Cada criança que passa por aqui torna nossos dias mais alegres e cheios de significado.\n\nSeguimos com o coração cheio de gratidão e felizes por fazer parte da rotina e do crescimento de cada criança. Que venham muitos outros meses de descobertas, afeto e momentos inesquecíveis! ✨",
-    date: "Hoje",
+    date: "12 de Maio de 2026",
     author: "Equipe Estrela da Manhã",
     image: "💛",
   },
